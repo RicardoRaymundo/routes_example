@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class FirstScreen extends StatelessWidget {
+class SwitchPageA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,11 +12,10 @@ class FirstScreen extends StatelessWidget {
           child: Text('Launch screen'),
           onPressed: () {
             // Navigate to the second screen using a named route.
-            Navigator.pushNamed(context, '/ex2second');
+            Navigator.pop(context);
           },
         ),
       ),
     );
   }
 }
-

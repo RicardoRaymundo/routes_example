@@ -11,7 +11,7 @@ class SecondRoute extends StatelessWidget {
         child: RaisedButton(
           onPressed: () {
             print(Navigator.canPop(context));
-            Navigator.popAndPushNamed(context, '/ex2first');
+            Navigator.pop(context);
           },
           child: Text('Go back!'),
         ),

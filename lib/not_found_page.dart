@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SecondScreen extends StatelessWidget {
+class NotFoundPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Screen"),
+        title: Text("Not Found Page!"),
       ),
       body: Center(
         child: RaisedButton(
@@ -15,7 +15,7 @@ class SecondScreen extends StatelessWidget {
             Navigator.pop(context);
             //Navigator.pop(context);
           },
-          child: Text('Go back!'),
+          child: Text('404: NOT FOUND!'),
         ),
       ),
     );

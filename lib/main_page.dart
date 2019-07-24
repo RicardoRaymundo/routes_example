@@ -61,6 +61,18 @@ class MainPage extends StatelessWidget {
                     context, MaterialPageRoute(builder: (BuildContext context) => FiveHeroApp()));
               },
             ),
+            RaisedButton(
+              child: Text('not found exemplo'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/AAAAA');
+              },
+            ),
+            RaisedButton(
+              child: Text('transicao animada'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/switchMainPage');
+              },
+            ),
           ],
         ),
       ),
