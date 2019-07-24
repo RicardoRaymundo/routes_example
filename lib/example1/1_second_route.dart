@@ -10,7 +10,8 @@ class SecondRoute extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           onPressed: () {
-            Navigator.pop(context);
+            print(Navigator.canPop(context));
+            Navigator.popAndPushNamed(context, '/ex2first');
           },
           child: Text('Go back!'),
         ),

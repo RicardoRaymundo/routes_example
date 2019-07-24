@@ -4,6 +4,7 @@ import 'example1/1_first_route.dart';
 import 'example3/3_todo_main.dart';
 import 'example4/4_home_screen.dart';
 import 'example5/5_hero_app.dart';
+import 'example2/2_second_screen.dart';
 
 class MainPage extends StatelessWidget {
   @override
@@ -16,6 +17,8 @@ class MainPage extends StatelessWidget {
             RaisedButton(
               child: Text('Exemplo 1: Basico'),
               onPressed: () {
+                print(Navigator.canPop(context));
+                print(Navigator.maybePop(context));
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => FirstRoute()),
@@ -26,7 +29,11 @@ class MainPage extends StatelessWidget {
               child: Text('Exemplo 2: Rotas Nomeadas'),
               onPressed: () {
                 // Navigate to the second screen using a named route.
-                Navigator.pushNamed(context, '/ex2first');
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (BuildContext context) => SecondScreen()),
+                  ModalRoute.withName('/'),
+                );
               },
             ),
             RaisedButton(
@@ -50,10 +57,8 @@ class MainPage extends StatelessWidget {
             RaisedButton(
               child: Text('Exemplo 4: return data'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FiveHeroApp()),
-                );
+                Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (BuildContext context) => FiveHeroApp()));
               },
             ),
           ],

@@ -12,7 +12,8 @@ class SecondScreen extends StatelessWidget {
           onPressed: () {
             // Navigate back to the first screen by popping the current route
             // off the stack.
-            Navigator.pop(context);
+            Navigator.popUntil(context, ModalRoute.withName('/'));
+            //Navigator.pop(context);
           },
           child: Text('Go back!'),
         ),

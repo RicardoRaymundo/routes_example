@@ -12,6 +12,7 @@ class FirstRoute extends StatelessWidget {
         child: RaisedButton(
           child: Text('Open route'),
           onPressed: () {
+            print(Navigator.canPop(context));
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => SecondRoute()),
